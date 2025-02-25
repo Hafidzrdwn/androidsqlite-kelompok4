@@ -108,8 +108,8 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:hint="@string/masukkan_kode_pelanggan"
-        android:textColor="#929090"
-        android:textSize="12sp"
+        android:textColor="#1d1f1d"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="Autofill,LabelFor" />
@@ -125,8 +125,8 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:hint="@string/masukkan_nama"
-        android:textColor="#929090"
-        android:textSize="12sp"
+        android:textColor="#1d1f1d"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText"
         tools:ignore="Autofill,LabelFor" />
@@ -142,8 +142,8 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:hint="@string/no_ponsel"
-        android:textColor="#929090"
-        android:textSize="12sp"
+        android:textColor="#1d1f1d"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2"
         tools:ignore="Autofill,LabelFor" />
