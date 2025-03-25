@@ -17,6 +17,7 @@
         android:fontFamily="serif"
         android:text="@string/kode_pelanggan"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,6 +30,7 @@
         android:fontFamily="serif"
         android:text="@string/nama_pelanggan"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -41,64 +43,65 @@
         android:fontFamily="serif"
         android:text="@string/no_telp"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_ubah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="404dp"
-        android:backgroundTint="#044E6F"
-        android:fontFamily="serif"
-        android:text="@string/hapus"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="404dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#044E6F"
         android:fontFamily="serif"
         android:text="@string/ubah"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btn_simpan"
+        app:layout_constraintTop_toBottomOf="@+id/ed_notelp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_baru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="404dp"
-        android:backgroundTint="#044E6F"
-        android:fontFamily="serif"
-        android:text="@string/simpan"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="404dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:autofillHints=""
         android:backgroundTint="#044E6F"
         android:fontFamily="serif"
         android:text="@string/baru"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_notelp" />
+
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#044E6F"
+        android:fontFamily="serif"
+        android:text="@string/simpan"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_baru"
+        app:layout_constraintTop_toBottomOf="@+id/ed_notelp" />
+
+    <Button
+        android:id="@+id/btn_hapus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#044E6F"
+        android:fontFamily="serif"
+        android:text="@string/hapus"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_ubah"
+        app:layout_constraintTop_toBottomOf="@+id/ed_notelp" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/ed_kode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
@@ -115,7 +118,7 @@
         tools:ignore="Autofill,LabelFor,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/ed_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -128,11 +131,11 @@
         android:textColor="#1d1f1d"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/ed_kode"
         tools:ignore="Autofill,LabelFor,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/ed_notelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -145,21 +148,63 @@
         android:textColor="#1d1f1d"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/ed_name"
         tools:ignore="Autofill,LabelFor,TextContrastCheck" />
 
     <TableLayout
         android:id="@+id/table_data"
-        android:layout_width="409dp"
-        android:layout_height="468dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="VisualLintBounds">
+        app:layout_constraintTop_toBottomOf="@+id/btn_hapus">
 
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#044E6F"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Kode"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Nama"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="No. Telp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
     </TableLayout>
 
     <androidx.appcompat.widget.Toolbar
@@ -171,18 +216,29 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Data Pelanggan"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="43dp"
         android:layout_height="42dp"
-        android:layout_marginTop="-57dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription,ImageContrastCheck"
         tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
